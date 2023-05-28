@@ -1,7 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Post } from './Post';
 
-export const PostsList = () => {
+export const PostsList = ({posts}) => {
   return (
-    <div>PostsList</div>
+    <>
+      {posts.map(post => 
+          <Post key={post.id}/>
+        )}
+    </>
   )
 }
