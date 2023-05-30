@@ -1,16 +1,16 @@
-import { useState } from "react";
+import { useState, useRef} from "react";
 import { abortController } from "../API/axios";
 
-export const useFetchingExt = (apiRequestFn) => {
+export const useFetching = (apiRequestFn) => {
     const abortControllerRef = useRef(abortController);
 
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
 
-    const fetching = async () => {
+    const fetching = async (...args) => {
         try {
             setIsLoading(true);
-            return await apiRequestFn();
+            return await apiRequestFn(...args);
         } catch (e) {
             setError(e.message);
         } finally {
