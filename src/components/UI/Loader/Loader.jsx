@@ -3,6 +3,6 @@ import classes from './Loader.module';
 
 export const Loader = () => {
   return (
-    <div className={classes.lds-roller}><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    <div className={classes.roller}><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
   )
 }

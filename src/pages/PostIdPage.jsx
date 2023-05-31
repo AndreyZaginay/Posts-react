@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
+import { Loader } from '../components/UI/Loader/Loader';
 import { useFetching } from '../hooks/useFetching';
 import { getPostById } from '../API/posts.api';
 import { getPostComments } from '../API/comments.api';
@@ -25,18 +26,24 @@ export const PostIdPage = () => {
 
   return (
     <div className='post-page'>
-        <h1>You have openned the post link by id</h1>
-      <div className='post'>
-        <h2> {post.title}</h2>
-        <p>{ post.body }</p>
-      </div>
+      <h1>You have openned the post link by id</h1>
+        {fetchPostState.isLoading
+            ? <Loader/>
+            : <div className='post'>
+                <h2> {post.title}</h2>
+                <p>{ post.body }</p>
+              </div>
+        }
       <div className='comments'>
-        <h3>Comments</h3>
-        <div>
-          {comments.map((comment, id) => 
-            <Comment key={id} comment={comment}/>
-          )}
-        </div>
+        {fetchCommentsState.isLoading
+          ? <Loader/>
+          : <div>
+              <h3>Comments</h3>
+                {comments.map((comment, id) => 
+                  <Comment key={id} comment={comment}/>
+                )}
+            </div>
+        }
       </div>
     </div>
   )
