@@ -10,3 +10,7 @@ export function getPosts(limit = 10, page = 1) {
         }
     });
 }
+
+export function getPostById(postId) {
+    return axiosInstance.get(`${url}/${postId}`)
+}
