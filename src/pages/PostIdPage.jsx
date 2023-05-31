@@ -5,19 +5,17 @@ import { Loader } from '../components/UI/Loader/Loader';
 import { useFetching } from '../hooks/useFetching';
 import { getPostById } from '../API/posts.api';
 import { getPostComments } from '../API/comments.api';
-import { Comment } from './Comment';
+import { Comment } from '../components/Comment';
 import '../assets/post';
 
 export const PostIdPage = () => {
 
-  
   const [post, setPost] = useState({});
   const [comments, setComments] = useState([]);
   const params = useParams();
 
   const [fetchPostById, fetchPostState] = useFetching(() => getPostById(params.id));
   const [fetchPostsComments, fetchCommentsState] = useFetching(() => getPostComments(params.id))
-
 
   useEffect(() => {
     fetchPostById().then(response => setPost(response.data));

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../assets/comment'
+import '../assets/comment';
 
 export const Comment = ({comment}) => {
   return (
