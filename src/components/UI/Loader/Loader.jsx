@@ -1,10 +1,8 @@
 import React from 'react';
-import classes from './Loader.module.css';
+import classes from './Loader.module';
 
-function Loader() {
+export const Loader = () => {
   return (
-    <div className={classes.loader}></div>
+    <div className={classes.lds-roller}><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
   )
 }
-
-export default Loader;
