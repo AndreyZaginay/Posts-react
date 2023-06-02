@@ -4,12 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import './../assets/postItem';
 import { MyButton } from './UI/Button/MyButton';
 
-export const Post = ({post}) => {
+export const PostItem = ({post}) => {
 
   const router = useNavigate();
 
   return (
-    <div className="postItem">s
+    <div className="postItem">
       <div className="post_content">
         <strong>{ post.id }. { post.title }</strong>
           <div>

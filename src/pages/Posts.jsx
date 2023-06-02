@@ -6,6 +6,7 @@ import { useFetching } from '../hooks/useFetching';
 import { useObserver } from '../hooks/useObserver';
 import { getPageCount } from '../utils/pages';
 import { Loader } from '../components/UI/Loader/Loader';
+import '../assets/posts';
 
 export const Posts = () => {
 
@@ -31,13 +32,13 @@ export const Posts = () => {
   }, [page, limit])
 
   return (
-    <>
+    <div className='posts'>
       <h1>Post with using jsonplaceholder</h1>
       <PostsList posts={posts}/>
       <div ref={lastElement} style={{height: 20, background: 'grey'}}></div>
       {fetchingState.isLoading && 
          <Loader/> 
       } 
-    </>
+    </div>
   )
 }
