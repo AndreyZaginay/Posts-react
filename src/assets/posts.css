@@ -1,3 +1,6 @@
 .posts {
     width: 800px;
 }
+.posts h1 {
+    text-align: center;
+}

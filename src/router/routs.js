@@ -19,3 +19,6 @@ export const routes = [
         component: NotFound
     }
 ]
+
+export const publicRoutes = [];
+export const privateRoutes = [];

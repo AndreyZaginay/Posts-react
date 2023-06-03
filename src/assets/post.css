@@ -6,3 +6,7 @@
 .post-page {
     width: 900px;
 }
+
+.post-page h1 {
+    text-align: center;
+}

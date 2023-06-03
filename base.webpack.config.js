@@ -29,6 +29,7 @@ function setupHtmlPlugin(env) {
 
 const src = path.resolve(__dirname, 'src');
 const dist = path.resolve(__dirname, 'dist');
+const assets = path.resolve(__dirname, 'src','assets');
 
 const baseWebpackConfig = (env) => ({
     context: src,
@@ -44,7 +45,8 @@ const baseWebpackConfig = (env) => ({
     resolve: {
         extensions: ['.js', '.jsx', '.css'],
         alias: {
-            '@core': src
+            '@core': src,
+            '@assets': assets
         }
     },
     optimization: {
