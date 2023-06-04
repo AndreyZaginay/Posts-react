@@ -24,7 +24,6 @@ export const Posts = () => {
 
   useEffect(() => {
     fetchPosts(limit, page).then(response => {
-      console.log(response);
       setPosts([...posts, ...response.data]);
       const totalCount = response.headers['x-total-count'];
       setTotalPages(getPageCount(totalCount, limit));

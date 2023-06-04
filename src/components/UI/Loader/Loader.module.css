@@ -1,6 +1,6 @@
 .roller {
     display: inline-block;
-    position: relative;
+    position: absolute;
     left: calc(50% - 40px);
     top: calc(50% - 40px);
     width: 80px;
