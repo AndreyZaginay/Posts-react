@@ -1,10 +1,19 @@
-import { NotFound } from "../pages/NotFound";
+import { Login } from "../pages/Login";
 import { PostIdPage } from "../pages/PostIdPage";
 import { Posts } from "../pages/Posts";
+import { LOGIN_PATH } from "../utilits/consts";
 
-export const routes = [
+export const publicRoutes = [
     {
-        path: '/posts',
+        path: LOGIN_PATH,
+        component: Login,
+        name: 'Login'
+    },
+
+];
+export const privateRoutes = [
+    {
+        path: 'posts',
         component: Posts,
         name: 'Posts',
         index: true
@@ -14,11 +23,5 @@ export const routes = [
         component: PostIdPage,
         name: 'PostIdPage'
     },
-    {
-        path: 'notFound',
-        component: NotFound
-    }
-]
 
-export const publicRoutes = [];
-export const privateRoutes = [];
+];
