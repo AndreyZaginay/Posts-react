@@ -7,10 +7,10 @@ export const useFetching = (apiRequestFn) => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
 
-    const fetching = async (...args) => {
+    const fetching = async () => {
         try {
             setIsLoading(true);
-            return await apiRequestFn(...args);
+            return await apiRequestFn();
         } catch (e) {
             setError(e.message);
         } finally {

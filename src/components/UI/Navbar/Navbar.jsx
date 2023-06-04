@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { NavLink } from 'react-router-dom';
 
-import { Context } from '../../..';
+import { Context } from '@core/index';
 import '@assets/navbar';
 
 export const Navbar = () => {

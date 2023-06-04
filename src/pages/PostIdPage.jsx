@@ -9,7 +9,6 @@ import { Comment } from '../components/Comment';
 import '../assets/post';
 
 export const PostIdPage = () => {
-
   const [post, setPost] = useState({});
   const [comments, setComments] = useState([]);
   const params = useParams();

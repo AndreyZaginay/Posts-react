@@ -1,7 +1,7 @@
 import { Login } from "../pages/Login";
 import { PostIdPage } from "../pages/PostIdPage";
 import { Posts } from "../pages/Posts";
-import { LOGIN_PATH } from "../utilits/consts";
+import { LOGIN_PATH } from "../utils/consts";
 
 export const publicRoutes = [
     {
